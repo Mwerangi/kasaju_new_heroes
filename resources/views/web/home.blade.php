@@ -9,7 +9,7 @@
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                    Professional Clearing & Forwarding Services in townnns 
+                    Professional Clearing & Forwarding Services
                 </h1>
                 <p class="text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto">
                     Specializing in vehicle and heavy machinery clearance at Dar es Salaam Port. Your trusted partner for efficient cargo clearance and logistics coordination in Tanzania.
