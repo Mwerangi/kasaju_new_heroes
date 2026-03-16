@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://newheroesintl.com/sitemap.xml
+
+# Disallow admin area
+Disallow: /admin/
+Disallow: /login
+
+# Disallow storage
+Disallow: /storage/
+
+# Allow public files
+Allow: /storage/gallery/
+Allow: /storage/blog/
+Allow: /storage/services/

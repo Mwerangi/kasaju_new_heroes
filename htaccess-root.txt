@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    
+    # Serve static files from New_heros/public if they exist
+    RewriteCond %{REQUEST_URI} ^/assets/
+    RewriteCond %{DOCUMENT_ROOT}/New_heros/public%{REQUEST_URI} -f
+    RewriteRule ^(.*)$ /New_heros/public/$1 [L]
+    
+    # Route all other requests to index.php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

@@ -1,0 +1,29 @@
+# EMERGENCY FIX - Run this directly on your server
+# Copy and paste these commands one by one into your SSH terminal
+
+## Navigate to your Laravel directory
+cd /home/tynexcot/public_html/heroes.tynex.co.tz/New_heros
+
+## Delete ALL corrupted cache files
+rm -rf bootstrap/cache/*.php storage/framework/cache/* storage/framework/views/* storage/framework/sessions/*
+
+## Delete vendor completely
+rm -rf vendor/
+
+## Fresh install (takes 2-3 minutes)
+php ~/composer install --no-dev --optimize-autoloader --no-interaction
+
+## Create necessary directories
+mkdir -p storage/framework/cache/data storage/framework/views storage/framework/sessions bootstrap/cache
+
+## Fix permissions
+chmod -R 775 storage bootstrap/cache
+
+## Test it
+echo "Testing..." && php artisan --version && echo "✅ Laravel is working!"
+
+## Visit your site
+echo "Now visit: https://heroes.tynex.co.tz"
+
+## If still broken, check logs
+# tail -20 storage/logs/laravel.log
