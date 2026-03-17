@@ -114,7 +114,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            background: linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #67e8f9 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
