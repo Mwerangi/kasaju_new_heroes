@@ -47,10 +47,10 @@
                     </div>
 
                     <div>
-                        <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                        <textarea name="description" id="description" rows="3"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 @error('description') border-red-500 @enderror">{{ old('description', $gallery->description) }}</textarea>
-                        @error('description')
+                        <label for="caption" class="block text-sm font-medium text-gray-700 mb-1">Caption</label>
+                        <textarea name="caption" id="caption" rows="3"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 @error('caption') border-red-500 @enderror">{{ old('caption', $gallery->caption) }}</textarea>
+                        @error('caption')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
@@ -65,12 +65,12 @@
 
                     <div class="space-y-4">
                         <div>
-                            <label for="gallery_category_id" class="block text-sm font-medium text-gray-700 mb-1">Category</label>
-                            <select name="gallery_category_id" id="gallery_category_id"
+                            <label for="category_id" class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                            <select name="category_id" id="category_id"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
                                 <option value="">No Category</option>
                                 @foreach($categories as $category)
-                                    <option value="{{ $category->id }}" {{ old('gallery_category_id', $gallery->gallery_category_id) == $category->id ? 'selected' : '' }}>
+                                    <option value="{{ $category->id }}" {{ old('category_id', $gallery->category_id) == $category->id ? 'selected' : '' }}>
                                         {{ $category->name }}
                                     </option>
                                 @endforeach

@@ -44,7 +44,7 @@ class GalleryController extends Controller
             'category_id' => 'nullable|exists:gallery_categories,id',
             'title' => 'required|string|max:255',
             'caption' => 'nullable|string|max:500',
-            'image' => 'required|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'image' => 'required|image|mimes:jpeg,png,jpg,webp,gif,svg,bmp,ico,avif|max:5120',
             'order' => 'nullable|integer',
             'is_active' => 'boolean',
         ]);
@@ -83,7 +83,7 @@ class GalleryController extends Controller
             'category_id' => 'nullable|exists:gallery_categories,id',
             'title' => 'required|string|max:255',
             'caption' => 'nullable|string|max:500',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp,gif,svg,bmp,ico,avif|max:5120',
             'order' => 'nullable|integer',
             'is_active' => 'boolean',
         ]);
