@@ -12,7 +12,7 @@
                     Professional Clearing & Forwarding Services i Tanzaniasbg
                 </h1>
                 <p class="text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto">
-                    Specializing in vehicle and heavy machinery clearance at Dar es Salaam Port. Your trusted partner for efficient cargo clearance and logistics coordination in Tanzania.
+                    xxxxx cf Specializing in vehicle and heavy machinery clearance at Dar es Salaam Port. Your trusted partner for efficient cargo clearance and logistics coordination in Tanzania.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4 mb-16">
                     <a href="{{ route('quote') }}" class="bg-yellow-500 hover:bg-yellow-600 text-white px-10 py-4 rounded-full font-semibold text-lg transition transform hover:scale-105 shadow-lg">
