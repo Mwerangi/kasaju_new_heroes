@@ -3,6 +3,9 @@
         Options -MultiViews -Indexes
     </IfModule>
 
+    # Enable following symlinks - REQUIRED for storage symlink
+    Options +FollowSymLinks
+
     RewriteEngine On
 
     # Handle Authorization Header

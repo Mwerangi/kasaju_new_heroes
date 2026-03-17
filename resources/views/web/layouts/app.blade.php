@@ -151,7 +151,7 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-5">
-                <a href="{{ route('home') }}" class="text-3xl font-bold text-gray-900 hover:text-blue-900 transition">
+                <a href="{{ route('home') }}" class="text-2xl font-bold text-gray-900 hover:text-blue-900 transition">
                     NEW HEROES<span class="text-yellow-500"> INTERNATIONAL LIMITED</span>
                 </a>
                 
