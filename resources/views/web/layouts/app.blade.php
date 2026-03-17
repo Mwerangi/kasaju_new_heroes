@@ -106,11 +106,81 @@
         .animate-fade-in-up {
             animation: fadeInUp 0.6s ease-out;
         }
+        
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader-dots {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .loader-dot {
+            width: 16px;
+            height: 16px;
+            background: #fbbf24;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        
+        .loader-dot:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        
+        .loader-dot:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+        
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .loader-text {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
     </style>
     
     @stack('styles')
 </head>
 <body class="bg-white">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-dots">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+        <div class="loader-text">Loading...</div>
+    </div>
     @php
         // Load contact info once for the entire layout
         $phone1 = \App\Models\ContactInformation::getByKey('phone1', '+255 625 544 404');
@@ -357,6 +427,21 @@
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             }
+        });
+    </script>
+    
+    <!-- Preloader Script -->
+    <script>
+        // Hide preloader when page is fully loaded
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.classList.add('hidden');
+                // Remove from DOM after transition
+                setTimeout(function() {
+                    preloader.remove();
+                }, 500);
+            }, 500); // Small delay for smooth experience
         });
     </script>
     
