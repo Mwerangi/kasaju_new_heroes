@@ -71,7 +71,7 @@
                 <div class="grid grid-cols-2 gap-4 h-[500px]">
                     <!-- Large Image - Left Side -->
                     <div class="row-span-2 relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-                        <img src="{{ asset('assets/Images_sent/range_vogue31.jpeg') }}" alt="Range Rover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="{{ asset('assets/images/range_vogue31.jpeg') }}" alt="Range Rover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                             <span class="text-white font-semibold text-lg">Luxury Vehicles</span>
                         </div>
@@ -79,7 +79,7 @@
                     
                     <!-- Top Right Image -->
                     <div class="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-                        <img src="{{ asset('assets/Images_sent/Volvo.jpg') }}" alt="Volvo Truck" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="{{ asset('assets/images/Volvo.jpg') }}" alt="Volvo Truck" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                             <span class="text-white font-semibold">Heavy Trucks</span>
                         </div>
@@ -87,7 +87,7 @@
                     
                     <!-- Bottom Right Image -->
                     <div class="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-                        <img src="{{ asset('assets/Images_sent/forester85117.jpg') }}" alt="Subaru Forester" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="{{ asset('assets/images/forester85117.jpg') }}" alt="Subaru Forester" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                             <span class="text-white font-semibold">SUVs & 4x4s</span>
                         </div>
