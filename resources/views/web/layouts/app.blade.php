@@ -120,29 +120,51 @@
         $whatsapp = \App\Models\ContactInformation::getByKey('whatsapp', $phone1);
     @endphp
     <!-- Top Bar -->
-    <div class="bg-gray-900 text-white py-2 md:py-3 border-b border-gray-800">
+    <div class="bg-gray-900 text-white py-3 border-b border-gray-800">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0 text-xs md:text-sm">
-                <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 md:gap-6">
+            <!-- Desktop Layout -->
+            <div class="hidden md:flex justify-between items-center text-sm">
+                <div class="flex gap-6">
                     <a href="tel:{{ str_replace(' ', '', $phone1) }}" class="flex items-center gap-2 hover:text-yellow-400 transition">
                         <i class="fas fa-phone text-yellow-400"></i>
-                        <span class="whitespace-nowrap">{{ $phone1 }}</span>
+                        <span>{{ $phone1 }}</span>
                     </a>
                     <a href="https://wa.me/{{ str_replace([' ', '+', '-'], '', $whatsapp) }}" target="_blank" class="flex items-center gap-2 hover:text-yellow-400 transition">
                         <i class="fab fa-whatsapp text-green-400"></i>
-                        <span class="whitespace-nowrap">{{ $phone2 }}</span>
+                        <span>{{ $phone2 }}</span>
                     </a>
                     <a href="mailto:{{ $email }}" class="flex items-center gap-2 hover:text-yellow-400 transition">
                         <i class="fas fa-envelope text-blue-400"></i>
-                        <span class="truncate max-w-[200px] sm:max-w-none">{{ $email }}</span>
+                        <span>{{ $email }}</span>
                     </a>
                 </div>
-                <div class="flex gap-3 md:gap-4">
-                    <a href="#" class="hover:text-yellow-400 transition text-base md:text-sm"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="hover:text-yellow-400 transition text-base md:text-sm"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-yellow-400 transition text-base md:text-sm"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="hover:text-yellow-400 transition text-base md:text-sm"><i class="fab fa-whatsapp"></i></a>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-yellow-400 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-yellow-400 transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-yellow-400 transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-yellow-400 transition"><i class="fab fa-whatsapp"></i></a>
                 </div>
+            </div>
+            
+            <!-- Mobile Layout - Compact Grid -->
+            <div class="grid md:hidden grid-cols-2 gap-3 text-xs">
+                <!-- Phone 1 -->
+                <a href="tel:{{ str_replace(' ', '', $phone1) }}" class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg transition">
+                    <i class="fas fa-phone text-yellow-400 text-sm"></i>
+                    <span class="truncate">{{ $phone1 }}</span>
+                </a>
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/{{ str_replace([' ', '+', '-'], '', $whatsapp) }}" target="_blank" class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg transition">
+                    <i class="fab fa-whatsapp text-green-400 text-sm"></i>
+                    <span class="truncate">{{ $phone2 }}</span>
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:{{ $email }}" class="col-span-2 flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg transition">
+                    <i class="fas fa-envelope text-blue-400 text-sm"></i>
+                    <span class="truncate">{{ $email }}</span>
+                </a>
             </div>
         </div>
     </div>
