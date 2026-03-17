@@ -66,11 +66,36 @@
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
+            <!-- Image Tile Grid -->
             <div class="relative">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <img src="{{ asset('assets/images/bandari.webp') }}" alt="Port Operations" class="w-full h-96 object-cover">
+                <div class="grid grid-cols-2 gap-4 h-[500px]">
+                    <!-- Large Image - Left Side -->
+                    <div class="row-span-2 relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                        <img src="{{ asset('assets/Images_sent/range_vogue31.jpeg') }}" alt="Range Rover" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white font-semibold text-lg">Luxury Vehicles</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Right Image -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                        <img src="{{ asset('assets/Images_sent/Volvo.jpg') }}" alt="Volvo Truck" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold">Heavy Trucks</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Right Image -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                        <img src="{{ asset('assets/Images_sent/forester85117.jpg') }}" alt="Subaru Forester" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold">SUVs & 4x4s</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                
+                <!-- Floating Card -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg z-10">
                     <div class="text-sm font-semibold text-gray-600 mb-1">OPERATING AT</div>
                     <div class="text-2xl font-bold text-blue-900">Dar es Salaam</div>
                     <div class="text-gray-600">Major Port Gateway</div>
